@@ -7,3 +7,4 @@ C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.csproj.Gener
 C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.csproj.CoreCompileInputs.cache
 C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.exe
 C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.pdb
+C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.csprojResolveAssemblyReference.cache

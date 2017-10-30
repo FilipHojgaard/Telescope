@@ -72,6 +72,11 @@
             // 
             // apertureUpDown
             // 
+            this.apertureUpDown.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.apertureUpDown.Location = new System.Drawing.Point(33, 46);
             this.apertureUpDown.Maximum = new decimal(new int[] {
             1000,
@@ -84,6 +89,11 @@
             // 
             // focalLengthUpDown
             // 
+            this.focalLengthUpDown.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             this.focalLengthUpDown.Location = new System.Drawing.Point(116, 46);
             this.focalLengthUpDown.Maximum = new decimal(new int[] {
             10000,
