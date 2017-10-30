@@ -1,0 +1,9 @@
+C:\Users\filip\source\repos\Telescope\Telescope\bin\Debug\Telescope.exe.config
+C:\Users\filip\source\repos\Telescope\Telescope\bin\Debug\Telescope.exe
+C:\Users\filip\source\repos\Telescope\Telescope\bin\Debug\Telescope.pdb
+C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.Form1.resources
+C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.Properties.Resources.resources
+C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.csproj.GenerateResource.Cache
+C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.csproj.CoreCompileInputs.cache
+C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.exe
+C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.pdb
