@@ -14,21 +14,26 @@ namespace Telescope
     {
         public double eyePiece;
         public double mag;
+        public double barlow = 1;
 
         public Form1()
         {
             InitializeComponent();
             eyePieceSelector.SelectedIndex = 0;
+            barlowSelector.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Focal Ratio Calculation
             if (focalLengthUpDown.Value == 0 || apertureUpDown.Value == 0)
                 MessageBox.Show("You can not Divide by 0","Error");
             else
             {
                 fRatio.Text = "f/" + Math.Round(focalLengthUpDown.Value / apertureUpDown.Value, 1);
-                mag = (Convert.ToDouble(focalLengthUpDown.Value) / eyePiece);
+
+                // Magnification calculation
+                mag = (Convert.ToDouble(focalLengthUpDown.Value) / eyePiece * barlow);  // mag bliver magnification efter focallength, eyepiece og barlow værdier
                 Console.WriteLine("eyepiece: " + eyePiece);
                 Console.WriteLine("index: " + eyePieceSelector.SelectedIndex);
                 if (eyePieceSelector.SelectedIndex == 0)
@@ -57,6 +62,19 @@ namespace Telescope
             if (eyePieceSelector.SelectedIndex == 8)
                 eyePiece = 40;
             
+        }
+
+        private void barlowSelector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (barlowSelector.SelectedIndex == 1)
+                barlow = 2;
+            if (barlowSelector.SelectedIndex == 2)
+                barlow = 2.3;
+            if (barlowSelector.SelectedIndex == 3)
+                barlow = 3;
+            if (barlowSelector.SelectedIndex == 0)
+                barlow = 1;
+            Console.WriteLine("barlow: " + barlow);
         }
     }
 }

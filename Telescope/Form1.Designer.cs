@@ -39,6 +39,8 @@
             this.fRatio = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.magnification = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.barlowSelector = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.apertureUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.focalLengthUpDown)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +48,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 30);
+            this.label1.Location = new System.Drawing.Point(9, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 0;
@@ -55,7 +57,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(113, 30);
+            this.label2.Location = new System.Drawing.Point(92, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 1;
@@ -64,7 +66,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(201, 30);
+            this.label3.Location = new System.Drawing.Point(180, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 2;
@@ -77,7 +79,7 @@
             0,
             0,
             0});
-            this.apertureUpDown.Location = new System.Drawing.Point(33, 46);
+            this.apertureUpDown.Location = new System.Drawing.Point(12, 34);
             this.apertureUpDown.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -94,7 +96,7 @@
             0,
             0,
             0});
-            this.focalLengthUpDown.Location = new System.Drawing.Point(116, 46);
+            this.focalLengthUpDown.Location = new System.Drawing.Point(95, 34);
             this.focalLengthUpDown.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -118,7 +120,7 @@
             "26 mm",
             "32 mm",
             "40 mm"});
-            this.eyePieceSelector.Location = new System.Drawing.Point(204, 44);
+            this.eyePieceSelector.Location = new System.Drawing.Point(183, 32);
             this.eyePieceSelector.Name = "eyePieceSelector";
             this.eyePieceSelector.Size = new System.Drawing.Size(96, 21);
             this.eyePieceSelector.TabIndex = 5;
@@ -126,7 +128,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(306, 34);
+            this.button1.Location = new System.Drawing.Point(367, 21);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 41);
             this.button1.TabIndex = 6;
@@ -137,7 +139,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 107);
+            this.label4.Location = new System.Drawing.Point(12, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 7;
@@ -146,7 +148,7 @@
             // fRatio
             // 
             this.fRatio.AutoSize = true;
-            this.fRatio.Location = new System.Drawing.Point(129, 107);
+            this.fRatio.Location = new System.Drawing.Point(108, 95);
             this.fRatio.Name = "fRatio";
             this.fRatio.Size = new System.Drawing.Size(15, 13);
             this.fRatio.TabIndex = 8;
@@ -155,7 +157,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(33, 131);
+            this.label6.Location = new System.Drawing.Point(12, 119);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 9;
@@ -164,18 +166,44 @@
             // magnification
             // 
             this.magnification.AutoSize = true;
-            this.magnification.Location = new System.Drawing.Point(129, 131);
+            this.magnification.Location = new System.Drawing.Point(108, 119);
             this.magnification.Name = "magnification";
             this.magnification.Size = new System.Drawing.Size(14, 13);
             this.magnification.TabIndex = 10;
             this.magnification.Text = "X";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(293, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Barlow:";
+            // 
+            // barlowSelector
+            // 
+            this.barlowSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.barlowSelector.FormattingEnabled = true;
+            this.barlowSelector.Items.AddRange(new object[] {
+            "-None-",
+            "2x",
+            "2,3x",
+            "3x"});
+            this.barlowSelector.Location = new System.Drawing.Point(296, 32);
+            this.barlowSelector.Name = "barlowSelector";
+            this.barlowSelector.Size = new System.Drawing.Size(56, 21);
+            this.barlowSelector.TabIndex = 12;
+            this.barlowSelector.SelectedIndexChanged += new System.EventHandler(this.barlowSelector_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(406, 352);
+            this.ClientSize = new System.Drawing.Size(471, 352);
+            this.Controls.Add(this.barlowSelector);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.magnification);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.fRatio);
@@ -211,6 +239,8 @@
         private System.Windows.Forms.Label fRatio;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label magnification;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox barlowSelector;
     }
 }
 
