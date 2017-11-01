@@ -42,6 +42,10 @@ namespace Telescope
                     magnification.Text = Math.Round(mag,1) + "X";
                 // Resolution  calculation
                 resolution.Text = "" + Math.Round((120/apertureUpDown.Value), 1) + " Arc Seconds";
+                // Maximum useful magnification calculation
+                mUG.Text = "" + 2.5 * Convert.ToDouble(apertureUpDown.Value) + "X";
+                // Longest useful eyepiece calculation
+                lUE.Text = "" + 7 * Math.Round(focalLengthUpDown.Value / apertureUpDown.Value, 1);
             }
         }
 
@@ -85,6 +89,13 @@ namespace Telescope
                 " distance between 2 points that you can seperate with your telescope, for instance a double star." +
                 " Smaller is better." +
                 "\n\n Unsteadiness in skyes, makes 1 arc second the practical limit for amateurs.", "Help");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Light that comes through your eyepiece but doesn't make it to your eye is wasted. " +
+                "Your eyes pupil is about 7 mm, so your eyepiece should have a focal length no larger " +
+                "than the width of your pupil, which gets smaller as you age.", "Help");
         }
     }
 }
