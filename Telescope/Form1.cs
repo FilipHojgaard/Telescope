@@ -20,12 +20,15 @@ namespace Telescope
         public double f;
         public bool reflector;
         public bool both = false;
+        public int degree;
+        public double fieldOfView;
 
         public Form1()
         {
             InitializeComponent();
             eyePieceSelector.SelectedIndex = 0;
             barlowSelector.SelectedIndex = 0;
+            degreeBox.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,6 +55,9 @@ namespace Telescope
                 mUG.Text = "" + 2.5 * Convert.ToDouble(apertureUpDown.Value) + "X";
                 // Longest useful eyepiece calculation
                 lUE.Text = "" + 7 * Math.Round(focalLengthUpDown.Value / apertureUpDown.Value, 1) + " mm";
+                // Field of view calculation
+                fieldOfView = Math.Round((degree * 60) / mag,1);
+                fOV.Text = "" + fieldOfView + " Arc Minutes";
                 // Udregn og print report
                 reportBox.Text = "";
                 both = false;
@@ -212,5 +218,50 @@ namespace Telescope
             }
 
             }
+
+        private void degreeBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (degreeBox.SelectedIndex == 0)
+                degree = 50;
+            if (degreeBox.SelectedIndex == 1)
+                degree = 50;
+            if (degreeBox.SelectedIndex == 2)
+                degree = 60;
+            if (degreeBox.SelectedIndex == 3)
+                degree = 70;
+            if (degreeBox.SelectedIndex == 4)
+                degree = 80;
+            if (degreeBox.SelectedIndex == 5)
+                degree = 90;
+            if (degreeBox.SelectedIndex == 6)
+                degree = 100;
+            Console.WriteLine(degree);
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("For reference, the full moon is covering half a degree or 30 Arc Minutes (30').", "Help");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("At this point you only magnify the blurryness. As you cannot zoom" +
+                " in on a newspaper with a loop, it will only be the dots on the paper you see larger.", "Help");
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("The object you are looking at appears to be this amount larger than with the naked eye.", "Help");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("A high F ratio means lesser light comes in but there is a great potential for magnifying.\n\n " +
+                "A low F ratio means alot of light, but perhaps with smaller potential for magnefying. " +
+                "It is not always one or the other though. \n\n> 9 is high. \n< 6 is low.", "Help");
+
+        }
     }
 }

@@ -8,3 +8,7 @@ C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.csproj.CoreC
 C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.exe
 C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.pdb
 C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.csprojResolveAssemblyReference.cache
+C:\Users\filip\source\repos\Telescope\Telescope\bin\Debug\Telescope.exe.manifest
+C:\Users\filip\source\repos\Telescope\Telescope\bin\Debug\Telescope.application
+C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.exe.manifest
+C:\Users\filip\source\repos\Telescope\Telescope\obj\Debug\Telescope.application
