@@ -41,6 +41,9 @@
             this.magnification = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.barlowSelector = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.resolution = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.apertureUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.focalLengthUpDown)).BeginInit();
             this.SuspendLayout();
@@ -196,12 +199,43 @@
             this.barlowSelector.TabIndex = 12;
             this.barlowSelector.SelectedIndexChanged += new System.EventHandler(this.barlowSelector_SelectedIndexChanged);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 145);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Resolution:";
+            // 
+            // resolution
+            // 
+            this.resolution.AutoSize = true;
+            this.resolution.Location = new System.Drawing.Point(108, 145);
+            this.resolution.Name = "resolution";
+            this.resolution.Size = new System.Drawing.Size(68, 13);
+            this.resolution.TabIndex = 14;
+            this.resolution.Text = "Arc Seconds";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(194, 141);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(20, 21);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "?";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(471, 352);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.resolution);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.barlowSelector);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.magnification);
@@ -241,6 +275,9 @@
         private System.Windows.Forms.Label magnification;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox barlowSelector;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label resolution;
+        private System.Windows.Forms.Button button2;
     }
 }
 

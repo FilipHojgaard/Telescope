@@ -40,6 +40,8 @@ namespace Telescope
                     magnification.Text = "Select Eyepiece";
                 else
                     magnification.Text = Math.Round(mag,1) + "X";
+                // Resolution  calculation
+                resolution.Text = "" + Math.Round((120/apertureUpDown.Value), 1) + " Arc Seconds";
             }
         }
 
@@ -75,6 +77,11 @@ namespace Telescope
             if (barlowSelector.SelectedIndex == 0)
                 barlow = 1;
             Console.WriteLine("barlow: " + barlow);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Resolution is measured in Arc Seconds. It is the smalles angular distance between 2 points that you can seperate with your telescope, for instance a double star. Smaller is better.", "Help");
         }
     }
 }
