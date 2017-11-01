@@ -81,7 +81,10 @@ namespace Telescope
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Resolution is measured in Arc Seconds. It is the smalles angular distance between 2 points that you can seperate with your telescope, for instance a double star. Smaller is better.", "Help");
+            MessageBox.Show("Resolution is measured in Arc Seconds. It is the smalles angular" +
+                " distance between 2 points that you can seperate with your telescope, for instance a double star." +
+                " Smaller is better." +
+                "\n\n Unsteadiness in skyes, makes 1 arc second the practical limit for amateurs.", "Help");
         }
     }
 }
