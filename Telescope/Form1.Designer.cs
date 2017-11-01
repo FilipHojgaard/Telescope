@@ -54,6 +54,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.apertureUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.focalLengthUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -353,12 +354,22 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Report";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 398);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(138, 13);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "Filip Højgaard Jensen, 2017";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(493, 413);
+            this.ClientSize = new System.Drawing.Size(493, 420);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -408,6 +419,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label11;
     }
 }
 
