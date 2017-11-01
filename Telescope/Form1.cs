@@ -45,7 +45,7 @@ namespace Telescope
                 // Maximum useful magnification calculation
                 mUG.Text = "" + 2.5 * Convert.ToDouble(apertureUpDown.Value) + "X";
                 // Longest useful eyepiece calculation
-                lUE.Text = "" + 7 * Math.Round(focalLengthUpDown.Value / apertureUpDown.Value, 1);
+                lUE.Text = "" + 7 * Math.Round(focalLengthUpDown.Value / apertureUpDown.Value, 1) + " mm";
             }
         }
 

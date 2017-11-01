@@ -264,13 +264,13 @@
             this.lUE.AutoSize = true;
             this.lUE.Location = new System.Drawing.Point(376, 119);
             this.lUE.Name = "lUE";
-            this.lUE.Size = new System.Drawing.Size(13, 13);
+            this.lUE.Size = new System.Drawing.Size(23, 13);
             this.lUE.TabIndex = 19;
-            this.lUE.Text = "0";
+            this.lUE.Text = "mm";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(404, 114);
+            this.button3.Location = new System.Drawing.Point(435, 114);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(20, 23);
             this.button3.TabIndex = 20;
